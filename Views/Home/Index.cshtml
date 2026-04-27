@@ -1,0 +1,309 @@
+﻿@{
+    ViewData["Title"] = "D'KAIZA - Salón de Belleza";
+}
+
+<!-- Sección Hero con imagen de portada -->
+<div class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="display-4">Bienvenida a D'KAIZA</h1>
+        <p class="lead">Transformamos tu belleza con arte y dedicación</p>
+        <a asp-controller="Servicios" asp-action="Index" class="btn btn-primary btn-lg">
+            <i class="fas fa-calendar-alt"></i> Reserva tu cita
+        </a>
+    </div>
+</div>
+
+<!-- Sección de Servicios Destacados -->
+<div class="container mt-5">
+    <h2 class="text-center mb-5 section-title">Nuestros Servicios</h2>
+    <div class="row">
+        <!-- Servicio 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-cut"></i>
+                </div>
+                <h3>Corte y Peinado</h3>
+                <p>Estilos modernos y clásicos adaptados a tu personalidad. Asesoría profesional para encontrar el look perfecto.</p>
+                <a asp-controller="Servicios" asp-action="Detalle" asp-route-id="1" class="btn-service">Ver más →</a>
+            </div>
+        </div>
+
+        <!-- Servicio 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Coloración</h3>
+                <p>Técnicas avanzadas: balayage, reflejos, color completo y más. Productos de alta calidad.</p>
+                <a asp-controller="Servicios" asp-action="Detalle" asp-route-id="2" class="btn-service">Ver más →</a>
+            </div>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-hand-sparkles"></i>
+                </div>
+                <h3>Maquillaje</h3>
+                <p>Maquillaje profesional para toda ocasión: social, novias, eventos. Técnicas a la última moda.</p>
+                <a asp-controller="Servicios" asp-action="Detalle" asp-route-id="3" class="btn-service">Ver más →</a>
+            </div>
+        </div>
+
+        <!-- Servicio 4 -->
+        <div class="col-md-4 mb-4">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-fingerprint"></i>
+                </div>
+                <h3>Uñas</h3>
+                <p>Manicura, pedicura, uñas acrílicas, gelish y nail art. Cuida tus manos y pies.</p>
+                <a asp-controller="Servicios" asp-action="Detalle" asp-route-id="4" class="btn-service">Ver más →</a>
+            </div>
+        </div>
+
+        <!-- Servicio 5 -->
+        <div class="col-md-4 mb-4">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-smile"></i>
+                </div>
+                <h3>Depilación</h3>
+                <p>Depilación con cera y técnicas indoloras para una piel suave y radiante.</p>
+                <a asp-controller="Servicios" asp-action="Detalle" asp-route-id="5" class="btn-service">Ver más →</a>
+            </div>
+        </div>
+
+        <!-- Servicio 6 -->
+        <div class="col-md-4 mb-4">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <h3>Tratamientos Faciales</h3>
+                <p>Limpiezas profundas, hidratación y tratamientos anti-age para lucir una piel perfecta.</p>
+                <a asp-controller="Servicios" asp-action="Detalle" asp-route-id="6" class="btn-service">Ver más →</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <a asp-controller="Servicios" asp-action="Index" class="btn btn-secondary btn-lg">
+            Ver todos los servicios <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+<!-- Sección de Testimonios -->
+<div class="testimonials-section mt-5">
+    <div class="container">
+        <h2 class="text-center mb-5 section-title">Lo que dicen nuestras clientas</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <p>"Excelente servicio, muy profesionales. Me encanta cómo me dejaron el cabello. Sin duda volveré."</p>
+                    <h5>- María González</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <p>"El mejor salón de belleza de la ciudad. Atención personalizada y calidad en todos los servicios."</p>
+                    <h5>- Ana Rodríguez</h5>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <p>"Me encantó el ambiente relajante y la profesionalidad de todo el equipo. ¡Recomendado!"</p>
+                    <h5>- Laura Martínez</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Hero Section con la imagen portada.jpeg */
+    .hero-section {
+        position: relative;
+        background-image: url('/images/portada.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        margin-top: -20px;
+    }
+    
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%);
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        animation: fadeInUp 1s ease-out;
+    }
+    
+    .hero-content h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .hero-content .lead {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+    
+    @@keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .section-title {
+        color: var(--desert-rock);
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    .section-title:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background-color: var(--soft-sandstone);
+    }
+    
+    .service-card {
+        background: var(--feather-white);
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        height: 100%;
+    }
+    
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .service-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--creamed-oat);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 35px;
+        color: var(--desert-rock);
+        transition: all 0.3s ease;
+    }
+    
+    .service-card:hover .service-icon {
+        background: var(--soft-sandstone);
+        color: white;
+        transform: rotateY(180deg);
+    }
+    
+    .service-card h3 {
+        color: var(--desert-rock);
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+    
+    .service-card p {
+        color: #666;
+        margin-bottom: 20px;
+    }
+    
+    .btn-service {
+        color: var(--soft-sandstone);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-service:hover {
+        color: var(--desert-rock);
+        text-decoration: none;
+        padding-left: 5px;
+    }
+    
+    .testimonials-section {
+        background: var(--creamed-oat);
+        padding: 60px 0;
+        margin-top: 50px;
+    }
+    
+    .testimonial-card {
+        background: var(--feather-white);
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+        height: 100%;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .testimonial-card i.fa-star {
+        color: #ffc107;
+        margin-bottom: 15px;
+    }
+    
+    .testimonial-card p {
+        color: #666;
+        font-style: italic;
+        margin: 15px 0;
+    }
+    
+    .testimonial-card h5 {
+        color: var(--desert-rock);
+        margin-top: 15px;
+        font-size: 1rem;
+    }
+    
+    @@media (max-width: 768px) {
+        .hero-section {
+            height: 450px;
+            background-attachment: scroll;
+        }
+        
+        .hero-content h1 {
+            font-size: 2rem;
+        }
+        
+        .hero-content .lead {
+            font-size: 1rem;
+        }
+    }
+</style>

@@ -1,0 +1,226 @@
+/* Variables de la paleta de colores */
+:root {
+    --desert-rock: #A48D78;
+    --soft-sandstone: #CB89A4;
+    --creamed-oat: #E6DAC8;
+    --porcelain-mist: #F4F1EA;
+    --feather-white: #FAF9F6;
+}
+
+/* Estilos generales */
+body {
+    background-color: var(--porcelain-mist);
+    color: #5a4a3a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Asegura que el footer se quede abajo */
+.container {
+    flex: 1;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--desert-rock) !important;
+    border-bottom: 3px solid var(--soft-sandstone);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand, .nav-link {
+    color: var(--feather-white) !important;
+    font-weight: 500;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: var(--creamed-oat) !important;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* ========== FOOTER D'KAIZA ========== */
+.footer-dkaiza {
+    background: linear-gradient(135deg, var(--desert-rock) 0%, #8a7563 100%);
+    color: var(--feather-white);
+    padding-top: 60px;
+    margin-top: 50px;
+    border-top: 4px solid var(--soft-sandstone);
+}
+
+.footer-brand {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-brand i {
+    color: var(--soft-sandstone);
+    margin-right: 10px;
+    font-size: 32px;
+}
+
+.footer-description {
+    color: var(--creamed-oat);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    color: var(--feather-white);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background-color: var(--soft-sandstone);
+    color: var(--feather-white);
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+.footer-title {
+    color: var(--feather-white);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--soft-sandstone);
+}
+
+.footer-links,
+.footer-hours,
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li,
+.footer-hours li,
+.footer-contact li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: var(--creamed-oat);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--feather-white);
+    transform: translateX(5px);
+    text-decoration: none;
+}
+
+.footer-hours li {
+    color: var(--creamed-oat);
+    font-size: 14px;
+}
+
+.footer-hours li span {
+    font-weight: 600;
+    color: var(--feather-white);
+    display: inline-block;
+    width: 110px;
+}
+
+.footer-hours .closed {
+    color: var(--soft-sandstone);
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--creamed-oat);
+    font-size: 14px;
+}
+
+.footer-contact li i {
+    margin-top: 3px;
+    color: var(--soft-sandstone);
+    width: 16px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 40px;
+    padding: 20px 0;
+    font-size: 13px;
+}
+
+.footer-bottom a {
+    color: var(--creamed-oat);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: var(--feather-white);
+    text-decoration: none;
+}
+
+/* Responsive para footer */
+@media (max-width: 768px) {
+    .footer-dkaiza {
+        padding-top: 40px;
+    }
+    
+    .footer-title:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-title {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-description {
+        text-align: center;
+    }
+    
+    .footer-brand {
+        text-align: center;
+    }
+    
+    .footer-contact li,
+    .footer-hours li {
+        justify-content: center;
+    }
+    
+    .footer-contact li {
+        justify-content: center;
+    }
+}
